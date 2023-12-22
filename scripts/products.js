@@ -1,15 +1,20 @@
+import { products } from "./data/products-data.js";
+import { cartQuantity, uppdateCartQuantity } from "./data/cart.js";
+import { truncate } from "./util/text.js";
+import { addEventHandlers } from "./control.js";
+
 function loadScript(source) {
   const script = document.createElement("script");
   script.src = source;
- // document.body.appendChild(script);
+  // document.body.appendChild(script);
   //console.log(products);
 }
-loadScript('C:\Users\wow\Desktop\projects\amazon\scripts\data\products-data.js');
+loadScript("C:UserswowDesktopprojectsamazonscriptsdataproducts-data.js");
 
 function generateHTML() {
-    let HTML="";
-   products.forEach((product)=>{
-            HTML +=`
+  let HTML = "";
+  products.forEach((product) => {
+    HTML += `
             <div id="here" class="product-container">
             <div class="product-image-container">
             <img
@@ -18,9 +23,13 @@ function generateHTML() {
             />
             </div>
 
-            <div class="product-name" limit-text-to-2-lines>${product.name }</div>
+            <div class="product-name" limit-text-to-2-lines>${
+              product.name
+            }</div>
             <div class="product-rating-container">
-            <img class="stars" src="images/ratings/rating-${(product.rating.stars)*10}.png" />
+            <img class="stars" src="images/ratings/rating-${
+              product.rating.stars * 10
+            }.png" />
             <div class="rate-counts">${product.rating.count}</div>
             </div>
             <div class="price">${product.priceCents}</div>
@@ -39,39 +48,35 @@ function generateHTML() {
             </select>
             </div>
             <div class="product-spacer"></div>
-            <button id="btn${product.id}" class="btn add-to-cart-btn js-add-to-cart">Add to Cart</button>
-        </div>`
-         
-      
-     
- })
+            <button id="btn${
+              product.id
+            }" class="btn add-to-cart-btn js-add-to-cart">Add to Cart</button>
+        </div>`;
+  });
 
-  
- return HTML;
+  return HTML;
 }
-function uppdateCartQuantity(button){
-    
-    console.log('updated'
-    )
-    let productID=button.id.slice(3)
-    console.log(productID)
-  
-    
 
-}
-renderProductsHTML()
-function renderProductsHTML(){
-    let productsHTML=generateHTML()
-  
-     document.getElementById("products-grid").innerHTML=productsHTML
+(function renderProductsHTML() {
+  let productsHTML = generateHTML();
 
-     let buttons = document.querySelectorAll('.js-add-to-cart')
-     buttons.forEach((button)=>{
-     
-    button.addEventListener('click', uppdateCartQuantity(button))
-     })
-        
+  document.getElementById("products-grid").innerHTML = productsHTML;
 
-}
-    
- 
+  addEventHandlers(".js-add-to-cart", "click", uppdateCartQuantity);
+})();
+addEventHandlers(
+  ".Search-btn",
+  "click",
+  () => {
+    console.log("it works");
+  },
+  false
+);
+addEventHandlers(
+  ".js-add-to-cart",
+  "click",
+  () => {
+    console.log("it works");
+  },
+  true
+);

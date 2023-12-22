@@ -46,6 +46,7 @@
   flex: 1;
   max-width: 1000px;
   align-items: center;
+
   display: flex;
   padding: 0 20px;
 }
@@ -59,7 +60,8 @@
 }
 
 .Search-btn {
-  background-color: var(--button-color);
+  background-color: var(--secondary-color);
+
   width: 44px;
   height: 40px;
   box-sizing: border-box;
@@ -91,11 +93,20 @@
 .cart-link {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .cart-icon {
-  height: 40px;
+  height: 38px;
 }
 .cart-text {
   margin-top: 30px;
+}
+.cart-Quantity {
+  position: absolute;
+  left: 35px;
+  bottom: 28px;
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: large;
 }

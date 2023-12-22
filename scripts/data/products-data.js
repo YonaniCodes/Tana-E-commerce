@@ -478,3 +478,5 @@ let id = Symbol("id");
 let id2 = Symbol();
 console.log(id.toString());
 console.log(id2.toString());
+
+export{products}
