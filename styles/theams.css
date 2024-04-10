@@ -3,4 +3,9 @@
   ---header-color: white;
 
   --secondary-color: rgb(233, 89, 22);
+  --date-color: green;
+  --link-color: rgb(9, 133, 190);
+}
+* {
+  font-family: sans-serif;
 }

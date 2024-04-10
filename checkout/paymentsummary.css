@@ -1,0 +1,30 @@
+.payment-summary {
+  border: 1px solid rgb(187, 197, 207);
+  margin-bottom: 1rem;
+}
+.summary {
+  margin: 0 1rem;
+  border-bottom: 1px solid rgb(187, 197, 207);
+}
+
+.summary h4,
+h3 {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(59, 54, 54);
+  margin: 0.5rem 0;
+}
+.order-it h2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 1rem;
+}
+.order-it .btn {
+  display: block;
+  width: 70%;
+  height: 35px;
+  margin: 1rem auto;
+  color: white;
+  border: none;
+  background-color: var(--secondary-color);
+}

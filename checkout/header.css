@@ -1,0 +1,26 @@
+header {
+  position: fixed;
+  top: 0;
+  height: 4rem;
+  left: 0;
+  right: 0;
+  background-color: white;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+a img {
+  height: 30px;
+}
+.cart-items {
+  display: inline;
+}
+header div {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+.cart-items span {
+  color: rgb(38, 167, 199);
+  font-size: 1.2rem;
+}

@@ -1,0 +1,22 @@
+label {
+  color: var(--date-color);
+}
+
+.delivery-options-grid h2 {
+  margin: 0;
+}
+.delivery-option {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+input {
+  margin: 0.8rem;
+}
+.payment-type {
+  color: rgb(177, 165, 165);
+}
+
+.large {
+  font-size: 1.2rem;
+}

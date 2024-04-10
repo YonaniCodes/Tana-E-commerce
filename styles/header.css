@@ -29,6 +29,7 @@
   border: 1px solid white;
 }
 .logo-link {
+  font-size: 2rem;
   height: 50px;
   display: flex;
   align-items: center;

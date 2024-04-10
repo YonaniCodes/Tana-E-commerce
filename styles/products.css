@@ -29,8 +29,7 @@
   text-transform: capitalize;
   margin-bottom: 10px;
   height: 40x;
-  border: 1px solid green;
-}
+ }
 
 .product-rating-container {
   display: flex;

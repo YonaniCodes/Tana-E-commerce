@@ -3,14 +3,6 @@ import { cartQuantity, uppdateCartQuantity } from "./data/cart.js";
 import { truncate } from "./util/text.js";
 import { addEventHandlers } from "./control.js";
 
-function loadScript(source) {
-  const script = document.createElement("script");
-  script.src = source;
-  // document.body.appendChild(script);
-  //console.log(products);
-}
-loadScript("C:UserswowDesktopprojectsamazonscriptsdataproducts-data.js");
-
 function generateHTML() {
   let HTML = "";
   products.forEach((product) => {
@@ -56,7 +48,6 @@ function generateHTML() {
 
   return HTML;
 }
-
 (function renderProductsHTML() {
   let productsHTML = generateHTML();
 
